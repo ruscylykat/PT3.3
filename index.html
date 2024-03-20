@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT2</title>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>ODD OR EVEN</h1>
+            <div class="content">
+                <p id="even"></p>
+                <p id="odd"></p>
+            </div>
+                <p id="equal"></p>
+        </div>
+    </main>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background-image: url(aesthetic-white-and-green-background-with-space-for-text-modern-background-design-with-liquid-shape-white-background-with-green-liquid-shapes-free-vector.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            font-family: "Kanit", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+        }
+
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        let equal = 0;
+        for (let i = 0; i < 25; i++){
+            const p = Number(prompt("Enter a number", "0")); 
+            if (p % 2 === 0) {
+                 document.getElementById("even").innerHTML += p + "- even" + "<br>";
+                equal += p;
+            }
+            else {
+                document.getElementById("odd").innerHTML += p + "- odd" + "<br>";
+            }
+        }
+        document.getElementById("equal").innerHTML = "Sum of all even numbers: " + equal;
+    </script>
+</body>
+</html>
